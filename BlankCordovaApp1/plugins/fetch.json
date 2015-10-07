@@ -1,0 +1,65 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-zip": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/MobileChromeApps/cordova-plugin-zip.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-file": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-file-transfer": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file-transfer"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "plugin.google.maps": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wf9a5m75/phonegap-googlemaps-plugin.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "API_KEY_FOR_ANDROID": "AIzaSyDFzPepdSGfa0BvZaIe2iyZoVxTuvPQGpo",
+            "API_KEY_FOR_IOS": "AIzaSyDFzPepdSGfa0BvZaIe2iyZoVxTuvPQGpo"
+        }
+    },
+    "com.googlemaps.ios": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nightstomp/googlemaps-ios-sdk-for-phonegap",
+            "subdir": ".",
+            "ref": "master"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-geolocation"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}
