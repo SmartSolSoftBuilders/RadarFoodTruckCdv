@@ -26,6 +26,8 @@ function openMenu(id) {
         window.location = "estaciones/estaciones.html";
     if (id == 5)
         window.location = "promociones/promociones.html";
+    if (id == 6)
+        window.location = "conantojode/conantojode.html";
     if (id == 7)
         window.location = "magazine/magazine.html";        
 }

@@ -10,27 +10,38 @@
             margin: 0;
             padding: 0;
         }
-
         #map {       
             left: 10%;     
             width: 80%;
-            height: 25%;
+            height: 18%;
+        }
+        #tablaImgLrg{
+            left: 10%;     
+            width: 60%;
+            height: 180;
+        }
+        #imgLrg{
+            left: 10%;     
+            width: 60%;
+            max-width: 60%;
+            max-height :180;
+            height: 20%;
         }
     </style>
 </head>
 <body bgcolor="black">
-    <img src="../../img/tituloP.png" onclick="window.history.back();" width="100%" height="14%" />    
-   <table width="600" height="200" align="center" />
-            <tr>
-                <td align="center">
-                    <img id="imagenLarge" src="" width="600" height="250" />
-                </td>
-            </tr>
-        </table>    
+    <img src="../../img/tituloP.png" onclick="window.history.back();" width=90%  height=12% />        
+    <table class="tablaImgLrg" width=80%  height=12% >    
+         <tr>
+              <td align="center">
+                 <img id="imagenLarge" src="" class="imgLrg" width=80%  height=200 />    
+             </td>
+         </tr>
+    </table>    
     <div>
         <table align="center">
             <tr align="center">
-                <td><img id="imagenIcono" src="" width="200" height="200" /></td>
+                <td><img id="imagenIcono" src="" width="120" height="120" /></td>
                 <td><div id="textoTruck"></div></td>
             </tr>
         </table>
@@ -41,12 +52,12 @@
                 <td bgcolor="#999999"><div id="textoDireccion"></div></td>                
             </tr>
     </table>
-    <table border="1" BORDERCOLOR="white" width="80%" height="10%" align="center"/>
+    <table border="1" BORDERCOLOR="white" width="80%" height="10%" align="center">
             <tr>
                 <td bgcolor="black"><div id="textoInfo"></div></td>
             </tr>
-        </table>
-        <table width="80%" height="10%" align="center" />
+    </table>
+    <table width="80%" height="10%" align="right" >
             <tr>
                 <td bgcolor="black"><img src="../../img/fb-logo.png" width="50" height="50" /><div id="textoRedes1"></div></td>
                 <td bgcolor="black"><img src="../../img/tw-logo.png" width="50" height="50" /><div id="textoRedes2"></div></td>
@@ -82,7 +93,7 @@ function initMap() {
       }
   }
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
+    zoom: 13,
     center: myLatLng
   });
 
@@ -98,6 +109,7 @@ function initMap() {
           if (fType == trucks[i].idTruck) {
               console.log(location + (trucks[i].idTruck) + "l.jpg");
               document.getElementById('imagenLarge').src = location + (trucks[i].idTruck) + "l.jpg";
+              document.getElementById('imagenLarge').class = "imgLrg";
               document.getElementById('imagenIcono').src = location + (trucks[i].idTruck) + ".jpg";
               document.getElementById('textoTruck').innerHTML = "<font color='white'>" + trucks[i].nombre + "</font>" + "<br><font color='white'>" + trucks[i].tipo + "</font><br><font color='white'>8am - 9pm</font>";
               document.getElementById('textoDireccion').innerHTML = "<font color='white'>Ubicaci&oacute;n: " + trucks[i].direccion + "</font>";
