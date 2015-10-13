@@ -28,22 +28,22 @@
         <table class="tablaImgLrg" width=60% height=12%>
             <tr>
                 <td width=10%>
-                    <img src="../../img/icons/icon2.png" onclick="openDetalle2(2);" width=60  height=60 />
+                    <img src="../../img/icons/icon2.png" onclick="openDetalle2(2);" width=58  height=58 />
                 </td>
                 <td width=10%>
-                    <img src="../../img/icons/icon3.png" onclick="openDetalle2(3);"  width=60  height=60/>
+                    <img src="../../img/icons/icon3.png" onclick="openDetalle2(3);"  width=58  height=58/>
                 </td>
                 <td>
-                    <img src="../../img/icons/icon4.png" onclick="openDetalle2(4);" width=60  height=60/>
+                    <img src="../../img/icons/icon4.png" onclick="openDetalle2(4);" width=58  height=58/>
                 </td>
                 <td>
-                    <img src="../../img/icons/icon5.png" onclick="openDetalle2(5);" width=60  height=60/>
+                    <img src="../../img/icons/icon5.png" onclick="openDetalle2(5);" width=58  height=58/>
                 </td>
                 <td>
-                    <img src="../../img/icons/icon6.png" onclick="openDetalle2(6);" width=60  height=60/>
+                    <img src="../../img/icons/icon6.png" onclick="openDetalle2(6);" width=58  height=58/>
                 </td>
                 <td>
-                    <img src="../../img/icons/icon7.png" onclick="openDetalle2(7);" width=60  height=60/>
+                    <img src="../../img/icons/icon7.png" onclick="openDetalle2(7);" width=58  height=58/>
                 </td>
             </tr>
         </table>
@@ -89,7 +89,8 @@
               for (i = 0; i < trucks.length; i++) {
                   var idT = trucks[i].idTruck;
                   console.log("Creando id:" + idT);
-                  if (trucks[i].latitud != "") {
+                  console.log("Creando id:" + trucks[i].status);
+                  if (trucks[i].latitud != "" && trucks[i].status=="1") {
                       myLatLng2 = { lat: parseFloat(trucks[i].latitud), lng: parseFloat(trucks[i].longitude) };
                       console.log(trucks[i].nombre + myLatLng2)
                       markers[i] = new google.maps.Marker({

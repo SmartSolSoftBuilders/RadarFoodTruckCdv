@@ -78,7 +78,7 @@ var clipboardAction = null; // c-copy, m-move
                 console.log(result)
                 var dataToStore = JSON.stringify(result);                
                 localStorage.setItem('version', (JSON.parse(dataToStore)).version);
-                localStorage.setItem('trucks', dataToStore);
+                localStorage.setItem('trucks', dataToStore);                
                 console.log("TRUCKS ENCONTRADOS")
                 console.log((JSON.parse(dataToStore)).numTrucks);
                 if (parseInt((JSON.parse(dataToStore)).numTrucks) > 0)

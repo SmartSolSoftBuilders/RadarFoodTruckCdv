@@ -78,11 +78,14 @@ function initMap() {
   console.log("Buscando localmente antes de petición en Detalle" + getUrlVars()["d"]);
   var fType = getUrlVars()["d"];
   console.log(fType);
-  var jsonFile = JSON.parse(localStorage.getItem('trucks'));
+  var jsonFile = JSON.parse(localStorage.getItem('trucks'));  
   console.log(jsonFile.trucks);
+  
     //alert("Se buscarán los datos de los trucks");
   var trucks = jsonFile.trucks;
-  console.log(trucks.length)
+ 
+  console.log(trucks.length);
+  
   var myLatLng = { lat: 19.444827, lng: -99.167437 };
   if (jsonFile != null && trucks.length > 0) {
       for (i = 0; i < trucks.length; i++) {
@@ -112,7 +115,7 @@ function initMap() {
               document.getElementById('imagenLarge').class = "imgLrg";
               document.getElementById('imagenIcono').src = location + (trucks[i].idTruck) + ".jpg";
               document.getElementById('textoTruck').innerHTML = "<font color='white'>" + trucks[i].nombre + "</font>" + "<br><font color='white'>" + trucks[i].tipo + "</font><br><font color='white'>8am - 9pm</font>";
-              document.getElementById('textoDireccion').innerHTML = "<font color='white'>Ubicaci&oacute;n: " + trucks[i].direccion + "</font>";
+              document.getElementById('textoDireccion').innerHTML = "<font color='white'>Ubicaci&oacute;n: " + trucks[i].direccion + "</font>";              
               document.getElementById('textoInfo').innerHTML = "<font color='white'>" + trucks[i].info + "</font>";
               document.getElementById('textoRedes1').innerHTML = "<font color='white'>" + trucks[i].facebook + "</font>";
               document.getElementById('textoRedes2').innerHTML = "<font color='white'>@" + trucks[i].twitter + "</font>";

@@ -11,7 +11,28 @@ var clipboardAction = null; // c-copy, m-move
 $(document).ready(function () {
     "use strict";
         // Handle the Cordova pause and resume events
-        //Se busca la versión de json
+    //Se busca la versión de json
+    $.ajax({
+        type: "POST",
+        url: "http://s544443713.onlinehome.mx/AppTrucks/app/getTrucksPositions.php",
+        dataType: 'JSON',
+        async: true,
+        cache: false,
+        beforeSend: function () {
+        },
+        success: function (result) {
+            console.log(result)
+            var dataToStore = JSON.stringify(result);
+            localStorage.setItem('version', (JSON.parse(dataToStore)).version);
+            localStorage.setItem('trucks', dataToStore);
+            console.log("TRUCKS ENCONTRADOS EN MAIN")
+            console.log((JSON.parse(dataToStore)).numtrucks);            
+        },
+        error: function (request, error) {
+            console.log(request);
+            //window.location = "pages/inicio.html";
+        }
+    });
     console.log("EN MAIN");                
 });
 
